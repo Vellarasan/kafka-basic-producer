@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    function:
+      definition: numberProducer
+    stream:
+      bindings:
+        numberProducer-out-0:
+          destination: numbers-topic
+
+      kafka:
+        binder:
+          brokers: localhost:9092
